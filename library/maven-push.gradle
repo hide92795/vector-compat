@@ -1,0 +1,15 @@
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId 'com.wnafee.fork'
+            artifactId 'vector-compat'
+            version '1.0.5'
+            artifact source: file("${project.buildDir}/libs/vector-compat-1.0.5.aar")
+        }
+    }
+    repositories {
+        maven {
+            url "file:${rootDir}/maven-repo"
+        }
+    }
+}
